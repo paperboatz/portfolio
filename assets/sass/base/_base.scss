@@ -1,0 +1,43 @@
+
+/**
+ * Resets & Reused Elements
+ */
+
+html {
+  box-sizing: border-box;
+  position: relative; // sticky footer style
+  min-height: 100%; // sticky footer style
+}
+
+// Default Body color 
+body {
+  background-color: palette(grey, dark);
+}
+
+hr {
+	margin: 0px;
+}
+
+h1, h2, h3, h4 {
+	margin-top: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+

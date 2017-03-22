@@ -1,0 +1,49 @@
+.container {
+  margin: 5%;
+  background-color: palette(grey, x-light);
+  padding: 2%;
+
+  & h1 {
+  	clear: both;
+  	background: red;
+  }
+}
+
+// temporary logo
+.logo {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  text-align: center;
+}
+
+.thumbcont {
+  width: 100%;
+  box-sizing: border-box;
+  clear: both;
+}
+
+.thumbcont__image {
+  width: 49%;
+  height: 300px;
+  background-color: palette(yellow);
+  display: inline-block;
+
+  &:nth-child(2){
+    float: right;
+  }
+}
+
+.social {
+	height: 100%;
+	margin-bottom: line-height-scale(1);
+}
+
+.social__icons {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  display: inline-block;
+  float: right;
+  margin-left: 1%;
+}

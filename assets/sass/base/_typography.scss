@@ -1,0 +1,38 @@
+body {
+  font-family: $font-family--primary;
+}
+
+p {
+	margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: $font-family--display;
+}
+
+h1 {
+	@include type-setting(5);
+	color: palette(yellow);
+}
+
+a {
+  color: palette(grey, dark);
+  text-decoration: none;
+
+  &:active{
+   color: palette(yellow);
+  }
+  &:visited {
+    color: pallete(yellow,dark);
+  }
+  &:hover{
+    color: palette(yellow, light);
+  }
+  &:focus{
+	color: palette(yellow, dark);
+  }	
+}
+
+.subtext {
+	@include type-setting(2);
+}

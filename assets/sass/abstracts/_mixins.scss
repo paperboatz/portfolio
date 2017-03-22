@@ -1,0 +1,9 @@
+
+// To create type settings groups in one go. 
+
+// https://scotch.io/tutorials/aesthetic-sass-3-typography-and-vertical-rhythm#disqus_thread
+@mixin type-setting($level){
+	font-size: type-scale($level);
+	line-height: line-height-scale($level);
+}
+
