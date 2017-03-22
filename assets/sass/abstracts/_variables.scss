@@ -29,7 +29,7 @@ $palettes: (
   ),
   yellow: (
     x-light  : lighten($yellow, 40%),
-    light    : lighten($yellow, 10%),
+    light    : lighten($yellow, 30%),
     base     : $yellow,
     dark     : darken($yellow, 10%)
   )

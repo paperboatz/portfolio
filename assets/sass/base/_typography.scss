@@ -11,8 +11,10 @@ h1, h2, h3 {
 }
 
 h1 {
-	@include type-setting(5);
+	font-size: type-scale(5);
+  line-height: line-height-scale(4);
 	color: palette(yellow);
+  text-transform: uppercase;
 }
 
 a {
@@ -33,6 +35,14 @@ a {
   }	
 }
 
-.subtext {
-	@include type-setting(2);
+.title__name{
+  color: palette(yellow, light); 
 }
+
+.subtext {
+  @include type-setting(-1);
+  text-transform: uppercase;
+  color: palette(grey, x-dark);
+}
+
+
