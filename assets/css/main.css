@@ -500,6 +500,9 @@ a {
   a:focus {
     color: #ccac00; }
 
+footer {
+  text-align: center; }
+
 .title__name {
   color: #ffef99; }
 
@@ -510,9 +513,10 @@ a {
   color: #c4c4c4; }
 
 .container {
-  margin: 5%;
+  margin: 3%;
   background-color: white;
-  padding: 2%; }
+  padding: 2%;
+  padding: 2% 2% 8%; }
   .container h1 {
     clear: both;
     margin-top: 2.5rem; }
@@ -520,28 +524,42 @@ a {
     margin-bottom: 3.75rem; }
 
 .logo {
-  width: 60px;
-  height: 60px;
-  background-color: red;
-  text-align: center;
   display: inline-block; }
+  .logo img {
+    width: 30%; }
 
 .thumbcont {
   width: 100%;
+  height: 70vh;
   box-sizing: border-box;
   clear: both; }
+  .thumbcont div {
+    display: inline-block; }
+  .thumbcont div:nth-child(2) {
+    float: right; }
 
-.thumbcont__image {
+.thumbcont__imgcont {
   width: 49%;
-  height: 300px;
+  height: 100%;
+  background-color: #0b0b0b;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.thumbcont__img--sole {
+  background-image: url(../img/journal.png); }
+
+.thumbcont__img--journ {
+  background-image: url(../img/solecast.png); }
+
+.thumbcont__img {
+  width: 100%;
   background-color: gold;
   display: inline-block; }
-  .thumbcont__image:nth-child(2) {
-    float: right; }
 
 .social {
   height: 40px;
-  margin-bottom: 1.25rem; }
+  margin-bottom: 3.75rem; }
 
 .social__icon {
   width: 40px;
@@ -554,8 +572,18 @@ a {
 nav {
   float: right; }
 
-.nav-links > li {
+.nav__links > li {
   list-style: none;
   display: inline-block; }
+
+footer {
+  margin-top: 2.5rem; }
+  footer div {
+    background-color: #ededed;
+    padding: 1%;
+    width: 47%; }
+
+.email > span {
+  padding-right: 2%; }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,11 +2,22 @@ nav {
   float: right;
 }
 
-.nav-links > li {
+.nav__links > li {
   list-style: none;
   display: inline-block;
 }
 
+footer {
+  margin-top: line-height-scale(2);
 
+  & div {
+    background-color: palette(grey);
+    padding: 1%;
+    width: 47%;
 
+  }
+}
 
+.email > span {
+  padding-right: 2%;
+}

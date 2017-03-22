@@ -1,7 +1,8 @@
 .container {
-  margin: 5%;
+  margin: 3%;
   background-color: palette(grey, x-light);
   padding: 2%;
+  padding: 2% 2% 8%;
 
   & h1 {
   	clear: both;
@@ -15,33 +16,55 @@
 
 // temporary logo
 .logo {
-  width: 60px;
-  height: 60px;
-  background-color: red;
-  text-align: center;
   display: inline-block;
+
+  & img {
+    width: 30%;
+  }
 }
 
 .thumbcont {
   width: 100%;
+  height: 70vh;
   box-sizing: border-box;
   clear: both;
-}
 
-.thumbcont__image {
-  width: 49%;
-  height: 300px;
-  background-color: palette(yellow);
-  display: inline-block;
+  & div {
+  	display: inline-block;
+  }
 
-  &:nth-child(2){
+  & div:nth-child(2){
     float: right;
   }
 }
 
+.thumbcont__imgcont {  
+  width: 49%;
+  height: 100%;
+  background-color: $black;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.thumbcont__img--sole {  
+  background-image: url(../img/journal.png);
+}
+
+.thumbcont__img--journ {  
+  background-image: url(../img/solecast.png);	
+}
+
+.thumbcont__img {
+  width: 100%;
+
+  background-color: palette(yellow);
+  display: inline-block;
+}
+
 .social {
   height: 40px;
-  margin-bottom: line-height-scale(0);
+  margin-bottom: line-height-scale(4);
 }
 
 .social__icon {
