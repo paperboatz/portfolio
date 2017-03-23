@@ -17,7 +17,6 @@
   'base/typography';
 
  //TYPOGRAPHY
-
 @import
   'layout/front',
   'layout/navfooter';
@@ -27,7 +26,8 @@
 // Page Specific 
 @import
   'pages/front',
-  'pages/project';
+  'pages/project',
+  'pages/aboutme';
 
 // Media Queries
 @import 

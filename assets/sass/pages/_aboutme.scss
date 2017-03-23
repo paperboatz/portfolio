@@ -1,0 +1,13 @@
+.aboutme {
+  background-color: $white;
+}
+
+.photo {
+	width: 150px;
+	height:170px;
+	background-image: url('../img/photo.jpg');
+	background-size: cover;
+	background-position: center;
+	border: 2px black solid;
+	float: right;
+}

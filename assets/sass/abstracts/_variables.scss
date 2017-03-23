@@ -25,7 +25,9 @@ $palettes: (
     light    : lighten($grey, 12%),
     base     : $grey,
     dark     : darken($grey, 8%),
-    x-dark   : darken($grey, 16%)
+    x-dark   : darken($grey, 16%),
+    xx-dark  : darken($grey, 43%)
+  
   ),
   yellow: (
     x-light  : lighten($yellow, 40%),

@@ -75,3 +75,15 @@
   float: right;
   margin-left: 1%;
 }
+
+.social__icon--linkedin,
+.social__icon--twitter, 
+.social__icon--ad,
+.social__icon--github {
+  &:hover{
+    fill: palette(yellow);
+  }
+}
+
+
+
