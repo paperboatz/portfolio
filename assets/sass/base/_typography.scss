@@ -1,5 +1,6 @@
 body {
   font-family: $font-family--primary;
+  @include type-setting(0);
 }
 
 p {
@@ -15,6 +16,22 @@ h1 {
   line-height: line-height-scale(4);
 	color: palette(yellow);
   text-transform: uppercase;
+}
+
+h3 {
+  color: palette(yellow, dark);
+  text-transform: capitalize;
+  padding-top: line-height-scale(-1);
+
+  &:nth-child(1){
+    padding-top: 0;
+  }
+
+  + span {
+    text-transform: uppercase;
+    color: palette(grey, x-dark);
+    font-size: type-scale(-1);
+  }
 }
 
 a {

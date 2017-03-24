@@ -1,7 +1,7 @@
 nav {
   position: absolute;
   right: 5%;
-  top: 5%;
+  top: line-height-scale(5);
   color: palette(yellow, x-light);
 }
 
@@ -15,22 +15,48 @@ nav {
 }
 
 footer {
+  clear: both;
   margin-top: line-height-scale(2);
   text-transform: uppercase;
 
-  & div {
+  div {
     background-color: palette(grey);
     padding: 1%;
     width: 47%;
+    height: line-height-scale(4);
+  }
+
+  div:first-child{
+    float: left;
+  }
+
+  div:last-child{
+    float: right;
+  }
+
+  .footer__icon{
+    width: 30px;
+  }
+}
+
+//first child of the div 
+.footer__text{
+  display: flex;
+  align-items: center;
+
+  a:first-child, span:first-child {
+    padding-right: type-scale(1);
   }
 }
 
 .ul-nested {
-  & ul {
+
+  ul {
 	  padding-top: 10%;
+    display: none;
   }
 
-  & li {
+  li {
   width: 120px;
   padding: 8% 8% 10%;
 	background-color: palette(grey, xx-dark);
@@ -47,7 +73,7 @@ footer {
 } 
 
 .email > span {
-  padding-right: 2%;
+  // padding-right: 2%;
 }
 
 .logo svg{

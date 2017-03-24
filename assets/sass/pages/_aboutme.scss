@@ -1,13 +1,44 @@
-.aboutme {
-  background-color: $white;
+.aboutme__cont {
+  width: 49%;
+  height: 100%;
+
+  p, ul {
+   @include paraSpacing;
+  }
+
+}
+
+.aboutme__cont--btmspace{
+  padding-bottom: line-height-scale(5);
 }
 
 .photo {
-	width: 150px;
-	height:170px;
-	background-image: url('../img/photo.jpg');
-	background-size: cover;
-	background-position: center;
-	border: 2px black solid;
+  width: 150px;
+  height:170px;
+  background-image: url('../img/photo.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 2px black solid;
+}
+
+.working {
+	li:last-child{
+		padding-top: line-height-scale(-2);
+	}
+}
+
+//override the vh
+//on front page
+.thumbcont.about {
+  height: initial;
+}
+
+.border {
+	border-bottom: 1px solid palette(yellow, light);
+	height: 20px;
+	width: 100%;
+}
+
+.play {
 	float: right;
 }

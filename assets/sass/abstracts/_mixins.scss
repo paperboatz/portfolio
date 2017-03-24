@@ -7,3 +7,10 @@
 	line-height: line-height-scale($level);
 }
 
+
+// TYPE Mixin
+@mixin paraSpacing {
+	margin-top: line-height-scale(-2);
+    margin-left: 40px;
+    width: 80%;
+}
