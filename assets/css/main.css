@@ -548,9 +548,9 @@ footer {
   height: 70vh;
   box-sizing: border-box;
   clear: both; }
-  .thumbcont div {
+  .thumbcont > div {
     float: left; }
-  .thumbcont div:nth-child(2n) {
+  .thumbcont > div:nth-child(2n) {
     float: right; }
 
 .thumbcont__imgcont {
@@ -705,26 +705,25 @@ footer {
 .aboutme__cont--btmspace {
   padding-bottom: 5rem; }
 
-.photo {
-  width: 150px;
-  height: 170px;
-  background-image: url("../img/photo.jpg");
-  background-size: cover;
-  background-position: center;
-  border: 2px black solid; }
-
 .working li:last-child {
   padding-top: 0.83333rem; }
 
 .thumbcont.about {
   height: initial; }
 
-.border {
+.photo {
+  width: 150px;
+  height: 170px;
+  background-image: url("../img/photo.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 2px black solid;
+  float: right; }
+
+.photoline {
   border-bottom: 1px solid #ffef99;
   height: 20px;
-  width: 100%; }
-
-.play {
-  float: right; }
+  width: 100%;
+  clear: both; }
 
 /*# sourceMappingURL=main.css.map */

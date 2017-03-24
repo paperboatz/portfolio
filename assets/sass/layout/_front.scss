@@ -20,11 +20,11 @@
   box-sizing: border-box;
   clear: both;
 
-  div {
+  > div {
   	float: left;
   }
 
-  div:nth-child(2n){
+  > div:nth-child(2n){
     float: right;
   }
 }

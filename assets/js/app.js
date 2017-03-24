@@ -19,17 +19,21 @@ category.on('mouseleave', function(event){
 // ==== Active Navagation =====
 // Found current path, grab last section of url
 // See if it match it to href on page 
-// if true, then add class, except on index page 
+// if true && not index add class,
+// if on index, then add class to projects in nav
 var urlPath = window.location.pathname;
 var endPath = urlPath.substring(urlPath.lastIndexOf('/') + 1 );
 var link = $("a[href= '" + endPath + "']");
 var baseUrl = link[0].href;
 var contains = baseUrl.indexOf(urlPath);
 
-if (contains !== -1 && endPath !== 'index.html' ){
-  link.addClass('activelink');
+if (contains !== -1){
+  if (endPath !== 'index.html') {
+    link.addClass('activelink')
+  } else { // if it does contain index.html
+  	$("[title='projects']").addClass('activelink')
+  }
 }
-
 
 // ==== Email Against Spam Bots =====
 $("<a href='mail" 

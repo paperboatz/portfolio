@@ -5,20 +5,10 @@
   p, ul {
    @include paraSpacing;
   }
-
 }
 
 .aboutme__cont--btmspace{
   padding-bottom: line-height-scale(5);
-}
-
-.photo {
-  width: 150px;
-  height:170px;
-  background-image: url('../img/photo.jpg');
-  background-size: cover;
-  background-position: center;
-  border: 2px black solid;
 }
 
 .working {
@@ -33,12 +23,20 @@
   height: initial;
 }
 
-.border {
+
+.photo {
+  width: 150px;
+  height:170px;
+  background-image: url('../img/photo.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 2px black solid;
+  float: right;
+}
+
+.photoline {
 	border-bottom: 1px solid palette(yellow, light);
 	height: 20px;
 	width: 100%;
-}
-
-.play {
-	float: right;
+  clear: both;
 }
