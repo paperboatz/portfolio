@@ -1,9 +1,8 @@
 .container {
   margin: 3%;
   background-color: palette(grey, x-light);
-  padding: 2% 2% 4%;
+  padding: 2% 4% 4%;
   overflow: hidden;
-
 
   & h1 {
   	clear: both;
@@ -21,11 +20,11 @@
   box-sizing: border-box;
   clear: both;
 
-  & div {
-  	display: inline-block;
+  div {
+  	float: left;
   }
 
-  & div:nth-child(2n){
+  div:nth-child(2n){
     float: right;
   }
 }
@@ -37,6 +36,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  margin-bottom: line-height-scale(4);
 }
 
 .thumbcont__img--sole {  

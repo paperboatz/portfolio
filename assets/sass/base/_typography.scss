@@ -38,9 +38,6 @@ a {
   color: palette(grey, dark);
   text-decoration: none;
 
-  &:active{
-   color: palette(yellow);
-  }
   &:visited {
     color: pallete(yellow,dark);
   }
@@ -50,6 +47,11 @@ a {
   &:focus{
 	color: palette(yellow, dark);
   }	
+}
+
+.activelink{
+  padding-bottom: 4px;
+  border-bottom: 1px solid palette(yellow, dark);
 }
 
 footer {

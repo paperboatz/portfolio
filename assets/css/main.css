@@ -509,14 +509,16 @@ h3 {
 a {
   color: #d9d9d9;
   text-decoration: none; }
-  a:active {
-    color: gold; }
   a:visited {
     color: pallete(yellow, dark); }
   a:hover {
     color: #ffef99; }
   a:focus {
     color: #ccac00; }
+
+.activelink {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ccac00; }
 
 footer {
   text-align: center; }
@@ -533,7 +535,7 @@ footer {
 .container {
   margin: 3%;
   background-color: white;
-  padding: 2% 2% 4%;
+  padding: 2% 4% 4%;
   overflow: hidden; }
   .container h1 {
     clear: both;
@@ -547,7 +549,7 @@ footer {
   box-sizing: border-box;
   clear: both; }
   .thumbcont div {
-    display: inline-block; }
+    float: left; }
   .thumbcont div:nth-child(2n) {
     float: right; }
 
@@ -557,7 +559,8 @@ footer {
   background-color: #0b0b0b;
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  margin-bottom: 3.75rem; }
 
 .thumbcont__img--sole {
   background-image: url(../img/journal.png); }
@@ -589,7 +592,7 @@ footer {
 
 nav {
   position: absolute;
-  right: 5%;
+  right: 7%;
   top: 5rem;
   color: #fff7cc; }
 
