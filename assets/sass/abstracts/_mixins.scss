@@ -7,10 +7,49 @@
 	line-height: line-height-scale($level);
 }
 
-
 // TYPE Mixin
 @mixin paraSpacing {
 	margin-top: line-height-scale(-2);
     margin-left: 40px;
     width: 80%;
+}
+
+@mixin headani {
+  display: inline-block;
+  font-size: type-scale(3);
+  text-transform: uppercase;
+  font-family: $font-family--display;
+  padding-bottom: 10px;
+  color: white;
+  position: absolute;
+  z-index: 3;
+  top: 40%;
+}
+
+@mixin borderani {
+  display: inline-block;
+  border-bottom: 1px palette(grey) solid;
+  height: 5px;
+  width: 20%;
+  position: absolute;
+  top: 46%;
+  z-index: 3;
+}
+
+@mixin subani {
+ display: inline-block;
+ position: absolute;
+ color: white;
+ text-transform: uppercase;
+ z-index: 3;
+ top: 50%;
+}
+
+@mixin thumbcover{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  position: absolute;
 }

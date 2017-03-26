@@ -2,7 +2,7 @@
   margin: 3%;
   background-color: palette(grey, x-light);
   padding: 2% 4% 4%;
-  overflow: hidden;
+  // overflow: hidden;
 
   & h1 {
   	clear: both;
@@ -29,29 +29,88 @@
   }
 }
 
+.hidden {
+  display: none;
+}
+
+
+// Adding rev to parent in jquery 
+// only way to override
+// the forward animation on child
+
+.headtitle__ani{
+  @include headani;
+  right: 45%;
+  animation: headerTextMove 1.5s ease-out 1 ;
+  animation-fill-mode: forwards;
+}
+
+.headtitle__ani--rev{
+  @include headani;
+  left: 28%;
+  animation: revHeaderTextMove 1.5s ease-out 1 ;
+}
+
+.headborder__ani{
+  @include borderani;
+  right: 38%;
+  animation: borderTextMove 1.5s ease-out 1 ;
+}
+
+.headborder__ani--rev{
+  @include borderani;
+  right: 45%;
+  animation: revBorderTextMove 2s ease-out 1 ;
+  animation-fill-mode: forwards;
+}
+
+.subtitle__ani{
+ @include subani;
+ right: 45%;
+ animation: subTextMove 1.5s ease-out 1 ;
+ animation-fill-mode: forwards;
+}
+
+.subtitle__ani--rev{
+ @include subani; 
+ right: 12%;
+ animation: revSubTextMove 1.5s ease-out 1 ;
+}
+
+.thumb__cover--rev {
+  @include thumbcover;
+  animation: revfadein 1s 1;
+}
+
+.thumb__cover--black {
+  @include thumbcover;
+  animation: fadein 1s 1;
+  animation-fill-mode: forwards;
+}
+
 .thumbcont__imgcont {  
   width: 49%;
   height: 100%;
   background-color: $black;
   background-size: cover;
-  background-position: center center;
+  background-position: 0 0;
   background-repeat: no-repeat;
   margin-bottom: line-height-scale(4);
-}
-
-.thumbcont__img--sole {  
-  background-image: url(../img/journal.png);
-}
-
-.thumbcont__img--journ {  
-  background-image: url(../img/solecast.png);	
+  position: relative;
 }
 
 .thumbcont__img {
   width: 100%;
-
   background-color: palette(yellow);
   display: inline-block;
+}
+
+.thumbcont__img--sole {  
+  background-image: url(../img/solecast.png); 
+}
+
+.thumbcont__img--journ {  
+  background-image: url(../img/journal.png);
 }
 
 .social {

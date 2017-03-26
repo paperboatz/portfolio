@@ -535,8 +535,7 @@ footer {
 .container {
   margin: 3%;
   background-color: white;
-  padding: 2% 4% 4%;
-  overflow: hidden; }
+  padding: 2% 4% 4%; }
   .container h1 {
     clear: both;
     margin-top: 2.5rem; }
@@ -553,25 +552,119 @@ footer {
   .thumbcont > div:nth-child(2n) {
     float: right; }
 
+.hidden {
+  display: none; }
+
+.headtitle__ani {
+  display: inline-block;
+  font-size: 2.368rem;
+  text-transform: uppercase;
+  font-family: "Unica One", "Helvetica", sans-serif;
+  padding-bottom: 10px;
+  color: white;
+  position: absolute;
+  z-index: 3;
+  top: 40%;
+  right: 45%;
+  animation: headerTextMove 1.5s ease-out 1;
+  animation-fill-mode: forwards; }
+
+.headtitle__ani--rev {
+  display: inline-block;
+  font-size: 2.368rem;
+  text-transform: uppercase;
+  font-family: "Unica One", "Helvetica", sans-serif;
+  padding-bottom: 10px;
+  color: white;
+  position: absolute;
+  z-index: 3;
+  top: 40%;
+  left: 28%;
+  animation: revHeaderTextMove 1.5s ease-out 1; }
+
+.headborder__ani {
+  display: inline-block;
+  border-bottom: 1px #ededed solid;
+  height: 5px;
+  width: 20%;
+  position: absolute;
+  top: 46%;
+  z-index: 3;
+  right: 38%;
+  animation: borderTextMove 1.5s ease-out 1; }
+
+.headborder__ani--rev {
+  display: inline-block;
+  border-bottom: 1px #ededed solid;
+  height: 5px;
+  width: 20%;
+  position: absolute;
+  top: 46%;
+  z-index: 3;
+  right: 45%;
+  animation: revBorderTextMove 2s ease-out 1;
+  animation-fill-mode: forwards; }
+
+.subtitle__ani {
+  display: inline-block;
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  z-index: 3;
+  top: 50%;
+  right: 45%;
+  animation: subTextMove 1.5s ease-out 1;
+  animation-fill-mode: forwards; }
+
+.subtitle__ani--rev {
+  display: inline-block;
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  z-index: 3;
+  top: 50%;
+  right: 12%;
+  animation: revSubTextMove 1.5s ease-out 1; }
+
+.thumb__cover--rev {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  position: absolute;
+  animation: revfadein 1s 1; }
+
+.thumb__cover--black {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  position: absolute;
+  animation: fadein 1s 1;
+  animation-fill-mode: forwards; }
+
 .thumbcont__imgcont {
   width: 49%;
   height: 100%;
   background-color: #0b0b0b;
   background-size: cover;
-  background-position: center center;
+  background-position: 0 0;
   background-repeat: no-repeat;
-  margin-bottom: 3.75rem; }
-
-.thumbcont__img--sole {
-  background-image: url(../img/journal.png); }
-
-.thumbcont__img--journ {
-  background-image: url(../img/solecast.png); }
+  margin-bottom: 3.75rem;
+  position: relative; }
 
 .thumbcont__img {
   width: 100%;
   background-color: gold;
   display: inline-block; }
+
+.thumbcont__img--sole {
+  background-image: url(../img/solecast.png); }
+
+.thumbcont__img--journ {
+  background-image: url(../img/journal.png); }
 
 .social {
   height: 40px;
@@ -655,6 +748,76 @@ footer {
 .logo__codes {
   fill: #7f7f7f; }
 
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.8; } }
+@keyframes revfadein {
+  0% {
+    opacity: 0.8; }
+  100% {
+    opacity: 0; } }
+@keyframes imgTextMove {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 20px 0%; } }
+@keyframes revImgTextMove {
+  0% {
+    background-position: 20px 0; }
+  100% {
+    background-position: 0 0; } }
+@keyframes headerTextMove {
+  0% {
+    left: 35%;
+    opacity: 0; }
+  100% {
+    left: 43%;
+    opacity: 1; } }
+@keyframes revHeaderTextMove {
+  0% {
+    left: 43%;
+    opacity: 1; }
+  100% {
+    left: 28%;
+    opacity: 0; } }
+@keyframes subTextMove {
+  0% {
+    right: 10%;
+    opacity: 1; }
+  100% {
+    right: 25%;
+    opacity: 1; } }
+@keyframes revSubTextMove {
+  0% {
+    right: 22%;
+    opacity: 1; }
+  100% {
+    right: 12%;
+    opacity: 0; } }
+@keyframes borderTextMove {
+  0% {
+    right: 5%;
+    opacity: 0;
+    width: 20%; }
+  50% {
+    width: 15%; }
+  100% {
+    right: 38%;
+    opacity: 0.2;
+    width: 20%; } }
+@keyframes revBorderTextMove {
+  0% {
+    right: 38%;
+    opacity: 0.2;
+    width: 20%; }
+  50% {
+    width: 15%; }
+  100% {
+    right: 10%;
+    opacity: 0;
+    width: 20%; } }
 .soleimg img {
   margin-bottom: 1.25rem;
   float: right;
