@@ -1,5 +1,5 @@
 
-// To create type settings groups in one go. 
+// ===  TYPE Mixin === //
 
 // https://scotch.io/tutorials/aesthetic-sass-3-typography-and-vertical-rhythm#disqus_thread
 @mixin type-setting($level){
@@ -7,46 +7,63 @@
 	line-height: line-height-scale($level);
 }
 
-// TYPE Mixin
 @mixin paraSpacing {
-	margin-top: line-height-scale(-2);
-    margin-left: 40px;
-    width: 80%;
+  margin-top: line-height-scale(-2);
+  margin-left: 40px;
+  width: 80%;
+}
+
+// === TEMPLATE === // 
+// Remember divs selected should be direct children 
+@mixin floats{
+
+  > div:nth-child(odd){
+    float: left;
+    clear: both;
+  }
+  
+  > div:nth-child(even){
+    float: right;
+  }
+}
+
+// ===  FRONT PAGE animation mixin === //
+
+@mixin aniBaseStyles{
+  display: inline-block;
+  color: white;
+  position: absolute;
+  z-index: 3;
 }
 
 @mixin headani {
-  display: inline-block;
+  @include aniBaseStyles;
   font-size: type-scale(3);
   text-transform: uppercase;
   font-family: $font-family--display;
   padding-bottom: 10px;
-  color: white;
-  position: absolute;
-  z-index: 3;
+  transform: translate(50%, 0);
   top: 40%;
 }
 
 @mixin borderani {
-  display: inline-block;
+  @include aniBaseStyles;
   border-bottom: 1px palette(grey) solid;
   height: 5px;
-  width: 20%;
-  position: absolute;
-  top: 46%;
-  z-index: 3;
+  width: 25%;
+  transform: translate(50%, 0);
+  top: 47%;
 }
 
 @mixin subani {
- display: inline-block;
- position: absolute;
- color: white;
+  @include aniBaseStyles;
  text-transform: uppercase;
- z-index: 3;
+ text-transform: center;
+ transform: translate(50%, 0);
  top: 50%;
 }
 
 @mixin thumbcover{
-  text-align: center;
   width: 100%;
   height: 100%;
   background-color: black;

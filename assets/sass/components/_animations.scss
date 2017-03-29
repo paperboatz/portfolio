@@ -9,72 +9,83 @@
   100% {opacity: 0}
 }
 
-@keyframes imgTextMove{
-  0% {background-position: 0 0}
-  100% {background-position: 20px 0%}
+@keyframes imgBkgMove {
+  0% {background-position: center top}
+  100% {background-position: left top}
 }
 
-@keyframes revImgTextMove{
-  0% { background-position: 20px 0;}
-  100% { background-position: 0 0;}
+@keyframes revImgBkgMove {
+  0% { background-position: left top;}
+  100% { background-position: center top;}
 }
 
 @keyframes headerTextMove{
-  0% {   left: 35%;
-         opacity: 0;}
-  100% { left: 43%;
-         opacity: 1;}
+  0% {   
+      right: 75%;
+      opacity: 0; 
+    }
+  100% { 
+      right: 50%;
+      opacity: 1; 
+    }
 }
 
-@keyframes revHeaderTextMove{
-  0% { left: 43%;
-       opacity: 1; }
-  100% { left: 28%;
-         opacity: 0; }
+@keyframes revHeaderTextMove {
+  0% { 
+      right: 50%;
+      opacity: 1; 
+    }
+  100% { 
+      right: 75%;
+      opacity: 0; 
+    }
 }
 
-@keyframes subTextMove{
+@keyframes subTextMove {
   0% {
-      right: 10%;
+      right: 25%;
       opacity: 1;
      }
   100% {
-      right: 25%;
+      right: 50%;
       opacity: 1;
     }
 }
 
-
-@keyframes revSubTextMove{
+@keyframes revSubTextMove {
   0% {
-      right: 22%;
-      opacity: 1; }
+      right: 50%;
+      opacity: 1; 
+    }
   100% {
-      right: 12%;
-      opacity: 0; }
+      right: 25%;
+      opacity: 1; 
+    }
 }
 
-@keyframes borderTextMove{
+@keyframes borderTextMove {
   0% {
-      right: 5%;
+      right: 10%;
       opacity: 0;
-      width: 20%; }
+    }
   50% {width: 15%}  
   100% {
-      right: 38%;
-      opacity: 0.2;
-      width: 20%; }
+      right: 50%;
+      opacity: 0.8;
+      width: 25%; 
+    }
 }
 
-@keyframes revBorderTextMove{
+@keyframes revBorderTextMove {
   0% {
-      right: 38%;
-      opacity: 0.2;
-      width: 20%; }
-  50% { width: 15%;}
-
+      right: 50%;
+      opacity: 0.8;
+      width: 20%; 
+    }
+  50% {width: 15%}
   100% {
       right: 10%;
       opacity: 0;
-      width: 20%; }
+      width: 20%; 
+    }
 }

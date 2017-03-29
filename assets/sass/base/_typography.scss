@@ -7,7 +7,7 @@ p {
 	margin: 0;
 }
 
-h1, h2, h3 {
+h1, h3 {
   font-family: $font-family--display;
 }
 
@@ -18,9 +18,16 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  @include type-setting(-1);
+  text-transform: uppercase;
+  color: palette(grey, x-dark);
+  padding-left: 25px;
+}
+
 h3 {
   color: palette(yellow, dark);
-  text-transform: capitalize;
+  text-transform: uppercase;
   padding-top: line-height-scale(-1);
 
   &:nth-child(1){
@@ -34,38 +41,44 @@ h3 {
   }
 }
 
+hr {
+  color: palette(yellow, x-dark);
+}
+
 a {
-  color: palette(grey, dark);
+  color: palette(grey, xx-dark);
   text-decoration: none;
 
   &:visited {
     color: pallete(yellow,dark);
   }
   &:hover{
-    color: palette(yellow, light);
+    color: palette(yellow);
   }
   &:focus{
 	color: palette(yellow, dark);
   }	
 }
 
+// Activated with jQuery
 .activelink{
   padding-bottom: 4px;
   border-bottom: 1px solid palette(yellow, dark);
 }
 
-footer {
-  text-align: center;
-}
-
+//Name of Pages
 .title__name{
-  color: palette(yellow, light); 
+  color: palette(yellow, light);
+  padding-left: 23px; 
 }
 
-.subtext {
-  @include type-setting(-1);
-  text-transform: uppercase;
-  color: palette(grey, x-dark);
+nav {
+  ul li li a {
+    color: palette(grey);
+  }
 }
+
+
+
 
 

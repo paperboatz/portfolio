@@ -1,85 +1,68 @@
-.container {
-  margin: 3%;
-  background-color: palette(grey, x-light);
-  padding: 2% 4% 4%;
-  // overflow: hidden;
-
-  & h1 {
-  	clear: both;
-  	margin-top: line-height-scale(3);	
-  }
-
-  & .subtext {
-  	margin-bottom: line-height-scale(4);
-  }
+.thumbcont__aniparent{
+  width: 49%;
+  height: 100%;
+  border: 1px solid palette(grey, x-dark);
 }
 
-.thumbcont {
+.thumbcont__imgcont {  
   width: 100%;
-  height: 70vh;
-  box-sizing: border-box;
-  clear: both;
-
-  > div {
-  	float: left;
-  }
-
-  > div:nth-child(2n){
-    float: right;
-  }
+  height: 100%;
+  background-color: $white;
+  object-fit: cover;
+  background-position: center top;
+  margin-bottom: line-height-scale(4);
+  position: relative;
 }
 
-.hidden {
-  display: none;
+.thumbcont__img--sole {  
+  background-image: url(../img/solecast.png); 
+}
+.thumbcont__img--journ {  
+  background-image: url(../img/journal.png);
 }
 
+
+// === THUMBNAIL ANI STYLES === //
 
 // Adding rev to parent in jquery 
 // only way to override
 // the forward animation on child
 
+.hidden {
+  display: none;
+}
+
 .headtitle__ani{
   @include headani;
-  right: 45%;
-  animation: headerTextMove 1.5s ease-out 1 ;
+  animation: headerTextMove 1.5s ease-out 1;
   animation-fill-mode: forwards;
 }
 
 .headtitle__ani--rev{
   @include headani;
-  left: 28%;
-  animation: revHeaderTextMove 1.5s ease-out 1 ;
+  animation: revHeaderTextMove 1.5s ease-out 1;
 }
 
 .headborder__ani{
   @include borderani;
-  right: 38%;
-  animation: borderTextMove 1.5s ease-out 1 ;
+  animation: borderTextMove 2s ease-out 1;
+  animation-fill-mode: forwards;
 }
 
 .headborder__ani--rev{
   @include borderani;
-  right: 45%;
-  animation: revBorderTextMove 2s ease-out 1 ;
-  animation-fill-mode: forwards;
+  animation: revBorderTextMove 2s ease-out 1;
 }
 
 .subtitle__ani{
  @include subani;
- right: 45%;
- animation: subTextMove 1.5s ease-out 1 ;
+ animation: subTextMove 1.5s ease-out 1;
  animation-fill-mode: forwards;
 }
 
 .subtitle__ani--rev{
  @include subani; 
- right: 12%;
- animation: revSubTextMove 1.5s ease-out 1 ;
-}
-
-.thumb__cover--rev {
-  @include thumbcover;
-  animation: revfadein 1s 1;
+ animation: revSubTextMove 1.5s ease-out 1;
 }
 
 .thumb__cover--black {
@@ -87,53 +70,21 @@
   animation: fadein 1s 1;
   animation-fill-mode: forwards;
 }
-
-.thumbcont__imgcont {  
-  width: 49%;
-  height: 100%;
-  background-color: $black;
-  background-size: cover;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  margin-bottom: line-height-scale(4);
-  position: relative;
+.thumb__cover--rev {
+  @include thumbcover;
+  animation: revfadein 1s 1;
 }
 
-.thumbcont__img {
-  width: 100%;
-  background-color: palette(yellow);
-  display: inline-block;
+.bkg__ani{
+  animation: imgBkgMove 1s ease-out 1;
+  animation-fill-mode: forwards;
 }
 
-.thumbcont__img--sole {  
-  background-image: url(../img/solecast.png); 
+.bkg__ani--rev{
+  animation: revImgBkgMove 1s ease-out 1;
+  background-color: red;
 }
 
-.thumbcont__img--journ {  
-  background-image: url(../img/journal.png);
-}
-
-.social {
-  height: 40px;
-  margin-bottom: line-height-scale(4);
-}
-
-.social__icon {
-  width: 40px;
-  height: 100%;
-  display: inline-block;
-  float: right;
-  margin-left: 1%;
-}
-
-.social__icon--linkedin,
-.social__icon--twitter, 
-.social__icon--ad,
-.social__icon--github {
-  &:hover{
-    fill: palette(yellow);
-  }
-}
 
 
 

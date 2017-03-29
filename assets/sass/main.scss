@@ -1,32 +1,35 @@
 @charset 'UTF-8';
 
-// // Abstracts
+//Abstracts
 @import 
   'abstracts/variables',
 	'abstracts/mixins',
 	'abstracts/functions';
 
-// Vendor 
+// VENDOR 
 @import 
   'vendor/normalize';
 
-//BASE
+// BASE
 @import 
   'base/base',
   'base/fonts',
   'base/typography';
 
- //TYPOGRAPHY
+ // LAYOUT
 @import
-  'layout/front',
+  'layout/tempshared',
   'layout/navfooter';
 
 // Components 
 @import
-  'components/animations';
+  'components/animations',
+  'components/socialicons',
+  'components/buttons';
 
 // Page Specific 
 @import
+  'pages/front',
   'pages/project',
   'pages/aboutme';
 

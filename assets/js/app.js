@@ -7,13 +7,25 @@ var ulNestedList = $('.ul-nested ul');
 var liNestedList = $('.ul-nested li');
 var category = $('.ul-nested');
 
+
 category.on('mouseenter', function(event){
   ulNestedList.slideDown(300);
 });
 
+
 category.on('mouseleave', function(event){
   ulNestedList.slideUp(300);
 });
+
+// ==== Responsive Navagation Drop down =====
+
+var rnavlinks = $('.rnav__links');
+var box = $('.rnav__box');
+
+box.on('click', function(event){
+  rnavlinks.fadeToggle('hidden', 'linear');
+});
+
 
 
 // ==== Active Navagation =====
@@ -31,7 +43,7 @@ if (contains !== -1){
   if (endPath !== 'index.html') {
     link.addClass('activelink')
   } else {
-  	$("[title='projects']").addClass('activelink')
+  	$("[title='Projects']").addClass('activelink')
   }
 }
 
@@ -54,23 +66,30 @@ var thumbcont = $('.thumbcont').children('a');
 for (var i = 0; i <= thumbcont.length; i++){
 
   var thumbnum = thumbcont.eq(i);
+  var bkg = thumbnum.find('.thumbcont__imgcont');
   var title = thumbnum.find('.headtitle');
   var border = thumbnum.find('.headborder');
   var sub = thumbnum.find('.subtitle');
   var cover = thumbnum.find('.thumb__cover');
   var hide = thumbnum.find('.infowrap');
 
-  thumbnail(thumbnum, title, border, sub, cover, hide);
+  thumbnail(thumbnum, bkg, title, border, sub, cover, hide);
 
 }
 
-function thumbnail(thumbnum, title, border, sub, cover, hide){
+function thumbnail(thumbnum, bkg, title, border, sub, cover, hide){
 
   thumbnum.on('mouseenter', function(){
 
     hide.removeClass('hidden');
 
     // Remove class from parent, add class to child
+    bkg
+       .parent()
+          .removeClass('bkg__ani--rev')
+          .end()
+          .addClass('bkg__ani');
+
     title
        .parent()
           .removeClass('headtitle__ani--rev')
@@ -100,6 +119,15 @@ thumbnum.on('mouseleave', function(){
 
     // Remove animations 
     // add reverse annimations onto parent
+   
+    bkg
+      .removeClass('bkg__ani')
+      .addClass('bkg__ani--rev')
+      // 
+      // .parent().addClass('bkg__ani--rev')
+      .end();
+      // .addClass('bkg__ani--rev');
+
     title
       .removeClass('headtitle__ani')
       .parent().addClass('headtitle__ani--rev');
