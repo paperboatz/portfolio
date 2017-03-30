@@ -1,0 +1,52 @@
+.container {
+  margin: 3%;
+  background-color: palette(grey, x-light);
+  padding: 2% 4% 4%;
+  overflow: hidden;
+
+  & h1 {
+    clear: both;
+    margin-top: line-height-scale(3); 
+  }
+
+  & .subtext {
+    margin-bottom: line-height-scale(4);
+  }
+}
+
+.thumbcont {
+  width: 100%;
+  height: 70vh;
+  box-sizing: border-box;
+  clear: both;
+  margin-bottom: line-height-scale(6);
+  @include floats;
+}
+
+
+// ==== LOGO ==== // 
+.logo svg{
+  width: 80px;
+  height: 80px;
+
+  // Higher than nav, must be positioned for index to work
+  position: relative;
+  z-index: 6;
+
+  &:hover{
+    .logo__tiff {
+      fill: palette(yellow, light)
+    } 
+    .logo__codes {
+      fill: palette(yellow);
+    }
+  }
+}
+
+.logo__tiff {
+  fill: palette(grey, dark);
+}
+
+.logo__codes {
+  fill: palette(grey, xx-dark);
+}
