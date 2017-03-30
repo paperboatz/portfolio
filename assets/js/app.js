@@ -1,12 +1,11 @@
 
-// ==== Navagation Drop down =====
-// instead of hide() to initally hide the nav
-// I used display: none in css, bc refreshes on page
-// reload flickered 
+// ==== Navagation Drop down =====//
+/* instead of hide() to initally hide the nav
+   I used display: none in css, bc refreshes on page
+   reload flickers nav */
 var ulNestedList = $('.ul-nested ul');
 var liNestedList = $('.ul-nested li');
 var category = $('.ul-nested');
-
 
 category.on('mouseenter', function(event){
   ulNestedList.slideDown(300);
@@ -28,11 +27,11 @@ box.on('click', function(event){
 
 
 
-// ==== Active Navagation =====
-// Found current path, grab last section of url
-// See if it match it to href on page 
-// if true && not index add class,
-// if on index, then add class to projects in nav
+// ==== Active Navagation ===== //
+/*  Found current path, grab last section of url
+    See if it match it to href on page 
+    if true && not index add class,
+    if on index, then add class to projects in nav */
 var urlPath = window.location.pathname;
 var endPath = urlPath.substring(urlPath.lastIndexOf('/') + 1 );
 var link = $("a[href= '" + endPath + "']");
@@ -49,21 +48,14 @@ if (contains !== -1){
 
 
 
-// ==== Thumbnail Hover =====
+// ==== Thumbnail Hover ===== //
 
-// Only want hover to affect one thumb at a time on mouseEnter/leave
-// depending on how many thumbs there are
-// we'll redefine variables for each particular one
-
-// Problems solved... hovering over one would change the rest
-// because the variables were the same
-// 
-// created a function that would execute on both of the thumbnails
-// problem is my classes are applied to not thier particular thumbnail
-
+/* Only want hover to affect one thumb at a time on mouseEnter/leave
+   Hovering over one would change the rest of thumb
+   bc the var were the same. Instead, we'll redefine each one **/
 var thumbcont = $('.thumbcont').children('a');
 
-for (var i = 0; i <= thumbcont.length; i++){
+for (var i = 0; i < thumbcont.length; i++){
 
   var thumbnum = thumbcont.eq(i);
   var bkg = thumbnum.find('.thumbcont__imgcont');
@@ -119,14 +111,10 @@ thumbnum.on('mouseleave', function(){
 
     // Remove animations 
     // add reverse annimations onto parent
-   
     bkg
       .removeClass('bkg__ani')
       .addClass('bkg__ani--rev')
-      // 
-      // .parent().addClass('bkg__ani--rev')
       .end();
-      // .addClass('bkg__ani--rev');
 
     title
       .removeClass('headtitle__ani')

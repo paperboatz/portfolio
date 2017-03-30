@@ -10,12 +10,12 @@ nav {
 
 .nav__links {
   text-align: right;
-}
 
-.nav__links > li {
-  list-style: none;
-  display: inline-block;
-  vertical-align: text-top;
+  > li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: text-top;
+  }
 }
 
 .ul-nested {
@@ -136,7 +136,7 @@ footer {
 }
 
 //first child of the div 
-// flex aligns center vertically
+// flex aligns divs center vertically
 .footer__text{
   display: flex;
   align-items: center;

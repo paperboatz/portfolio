@@ -581,11 +581,10 @@ nav {
 
 .nav__links {
   text-align: right; }
-
-.nav__links > li {
-  list-style: none;
-  display: inline-block;
-  vertical-align: text-top; }
+  .nav__links > li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: text-top; }
 
 .ul-nested ul {
   padding-top: 10%;
