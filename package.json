@@ -4,8 +4,8 @@
   "description": "Built with HTML CSS/Sass jQuery.",
   "main": "index.js",
   "dependencies": {
-    "http-server": "^0.9.0",
-    "node-static": "^0.7.9"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
   },
   "devDependencies": {},
   "scripts": {
