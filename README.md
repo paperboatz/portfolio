@@ -1,4 +1,4 @@
-###Dev Portfolio in Progress
+# Dev Portfolio in Progress
 
 Built with HTML CSS/Sass jQuery. 
 
