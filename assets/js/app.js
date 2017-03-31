@@ -26,8 +26,6 @@ box.on('click', function(event){
   rnavlinks.fadeToggle('hidden', 'linear');
 });
 
-
-
 // ==== Active Navagation ===== //
 /*  Found current path, grab last section of url
     See if it match it to href on page 
@@ -36,8 +34,8 @@ box.on('click', function(event){
 var urlPath = window.location.pathname;
 var endPath = urlPath.substring(urlPath.lastIndexOf('/') + 1 );
 
-/* When first entering domain tiffcodes.com, there is after /
-    it will return err, so instead add class right to projects
+/* When first entering domain tiffcodes.com, there is no after /**
+    it will return err, so instead, add class right to projects
     else carry on. */
 if (endPath === false){
   $("[title='Projects']").addClass('activelink')  
