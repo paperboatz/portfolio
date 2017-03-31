@@ -33,45 +33,15 @@ box.on('click', function(event){
     See if it match it to href on page 
     if true && not index add class,
     if on index, then add class to projects in nav */
-// var urlPath = window.location.pathname;
-// var endPath = urlPath.substring(urlPath.lastIndexOf('/') + 1 );
-
-// // when we first click on domain tiffcodes.com, there is no index
-// // will return error, this will prevent that 
-// if (typeOf endPath === ''){
-//   // ignore all the stuff at the bottom
-//   // we'll just go to the else... 
-// };
-
-// var link = $("a[href= '" + endPath + "']");
-// var baseUrl = link[0].href;
-
-// // if endpath type of is undefined
-// // then endpath will be index.html  
-
-// var contains = baseUrl.indexOf(urlPath);
-
-// if (contains !== -1){
-//   if (endPath !== 'index.html') {
-//     link.addClass('activelink')
-//   } else {
-//   	$("[title='Projects']").addClass('activelink')
-//   }
-// }
-
-
-// ==== Active Navagation ===== //
-/*  Found current path, grab last section of url
-    See if it match it to href on page 
-    if true && not index add class,
-    if on index, then add class to projects in nav */
 var urlPath = window.location.pathname;
 var endPath = urlPath.substring(urlPath.lastIndexOf('/') + 1 );
+
+
 
 /* When first entering domain tiffcodes.com, there is after /
     it will return err, so instead add class right to projects
     else carry on. */
-if (typeOf endPath === ''){
+if (endPath === '' || 'undefined'){
   $("[title='Projects']").addClass('activelink')
 } else { 
 
