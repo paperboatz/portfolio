@@ -36,13 +36,11 @@ box.on('click', function(event){
 var urlPath = window.location.pathname;
 var endPath = urlPath.substring(urlPath.lastIndexOf('/') + 1 );
 
-
-
 /* When first entering domain tiffcodes.com, there is after /
     it will return err, so instead add class right to projects
     else carry on. */
-if (endPath === '' || 'undefined'){
-  $("[title='Projects']").addClass('activelink')
+if (endPath === false){
+  $("[title='Projects']").addClass('activelink')  
 } else { 
 
    var link = $("a[href= '" + endPath + "']");
@@ -58,11 +56,6 @@ if (endPath === '' || 'undefined'){
   }
 
 };
-
-
-
-
-
 
 // ==== Thumbnail Hover ===== //
 
