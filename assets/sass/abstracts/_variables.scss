@@ -1,9 +1,4 @@
 /* 
-* --- Solid Colors---
-*/
-
-
-/* 
 * --- Copy Text Color ---
 */
 
@@ -37,22 +32,9 @@ $palettes: (
   )
 );
 
-/* 
-* --- Background Colors ---
-*/
-
 
 /* 
-* --- Special Text Colors ---
-*/
-
-/* 
-* --- Element Colors ---
-*/
-
-
-/* 
-* ==== TYPE =====
+* ========= TYPE ================
 */
 
 
@@ -66,7 +48,7 @@ $font-family--display: (
 );
 
 $font-family--primary: (
-	'Inconsolatas',
+	'Inconsolata',
   'Consolas',
 	'Courier New',
 	monospace
@@ -105,11 +87,10 @@ $line-heights: (
   6: $base-line-height * 5
 );
 
-// $type-weights: (
-// 	light: 300,
-// 	med: 400,
-// 	heavy: 700
-// );
+$type-weights: (
+	regular: 400,
+	bold: 700
+);
 
 
 
