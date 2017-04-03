@@ -37,20 +37,23 @@ var endPath = urlPath.substring(urlPath.lastIndexOf('/') + 1 );
 /* When first entering domain tiffcodes.com, there is no after /**
     it will return err, so instead, add class right to projects
     else carry on. */
-if (endPath === false){
-  $("[title='Projects']").addClass('activelink')  
-} else { 
+  if (endPath == false){
+    $("[title='Projects']").addClass('activelink');
 
-   var link = $("a[href= '" + endPath + "']");
-   var baseUrl = link[0].href;
-   var contains = baseUrl.indexOf(urlPath);
+  } else { 
 
-  if (contains !== -1){
-    if (endPath !== 'index.html') {
-      link.addClass('activelink')
-    } else {
-      $("[title='Projects']").addClass('activelink')
-    }
+     var link = $("a[href= '" + endPath + "']");
+     
+     var baseUrl = link[0].href;
+
+     var contains = baseUrl.indexOf(urlPath);
+
+    if (contains !== -1){
+      if (endPath !== 'index.html') {
+        link.addClass('activelink')
+      } else {
+        $("[title='Projects']").addClass('activelink')
+      }
   }
 
 };
