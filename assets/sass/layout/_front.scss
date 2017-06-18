@@ -1,0 +1,90 @@
+.thumbcont__aniparent{
+  width: 49%;
+  height: 100%;
+  border: 1px solid palette(grey, x-dark);
+}
+
+.thumbcont__imgcont {  
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  object-fit: cover;
+  background-position: center top;
+  margin-bottom: line-height-scale(4);
+  position: relative;
+}
+
+.thumbcont__img--sole {  
+  background-image: url(../img/solecast.png); 
+}
+.thumbcont__img--journ {  
+  background-image: url(../img/journal.png);
+}
+
+
+// === THUMBNAIL ANI STYLES === //
+
+// Adding rev to parent in jquery 
+// only way to override
+// the forward animation on child
+
+.hidden {
+  display: none;
+}
+
+.headtitle__ani{
+  @include headani;
+  animation: headerTextMove 1.5s ease-out 1;
+  animation-fill-mode: forwards;
+}
+
+.headtitle__ani--rev{
+  @include headani;
+  animation: revHeaderTextMove 1.5s ease-out 1;
+}
+
+.headborder__ani{
+  @include borderani;
+  animation: borderTextMove 2s ease-out 1;
+  animation-fill-mode: forwards;
+}
+
+.headborder__ani--rev{
+  @include borderani;
+  animation: revBorderTextMove 2s ease-out 1;
+}
+
+.subtitle__ani{
+ @include subani;
+ animation: subTextMove 1.5s ease-out 1;
+ animation-fill-mode: forwards;
+}
+
+.subtitle__ani--rev{
+ @include subani; 
+ animation: revSubTextMove 1.5s ease-out 1;
+}
+
+.thumb__cover--black {
+  @include thumbcover;
+  animation: fadein 1s 1;
+  animation-fill-mode: forwards;
+}
+.thumb__cover--rev {
+  @include thumbcover;
+  animation: revfadein 1s 1;
+}
+
+.bkg__ani{
+  animation: imgBkgMove 1s ease-out 1;
+  animation-fill-mode: forwards;
+}
+
+.bkg__ani--rev{
+  animation: revImgBkgMove 1s ease-out 1;
+  background-color: red;
+}
+
+
+
+

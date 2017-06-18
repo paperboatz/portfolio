@@ -1,0 +1,38 @@
+@charset 'UTF-8';
+
+//Abstracts
+@import 
+  'abstracts/variables',
+	'abstracts/mixins',
+	'abstracts/functions';
+
+// VENDOR 
+@import 
+  'vendor/normalize';
+
+// BASE
+@import 
+  'base/base',
+  'base/fonts',
+  'base/typography';
+
+ // LAYOUT
+@import
+  'layout/tempshared',
+  'layout/navfooter';
+
+// Components 
+@import
+  'components/animations',
+  'components/socialicons',
+  'components/buttons';
+
+// Page Specific 
+@import
+  'pages/front',
+  'pages/project',
+  'pages/aboutme';
+
+// Media Queries
+@import 
+  'responsive/mediaqueries';

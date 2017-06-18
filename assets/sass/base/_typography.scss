@@ -1,0 +1,90 @@
+body {
+  font-family: $font-family--primary;
+  @include type-setting(0);
+}
+
+p {
+	margin: 0;
+}
+
+h1, h3 {
+  font-family: $font-family--display;
+}
+
+h1 {
+	font-size: type-scale(5);
+  line-height: line-height-scale(4);
+	color: palette(yellow);
+  text-transform: uppercase;
+}
+
+h2 {
+  @include type-setting(-1);
+  text-transform: uppercase;
+  color: palette(grey, x-dark);
+  padding-left: 25px;
+  letter-spacing: 1.5px;
+}
+
+h3 {
+  color: palette(yellow, dark);
+  text-transform: uppercase;
+  padding-top: line-height-scale(-1);
+
+  &:nth-child(1){
+    padding-top: 0;
+  }
+
+  + span {
+    text-transform: uppercase;
+    color: palette(grey, x-dark);
+    font-size: type-scale(-1);
+  }
+}
+
+hr {
+  color: palette(yellow, x-dark);
+}
+
+a {
+  color: palette(grey, xx-dark);
+  text-decoration: none;
+
+  &:visited {
+    color: pallete(yellow,dark);
+  }
+  &:hover{
+    color: palette(yellow);
+  }
+  &:focus{
+	color: palette(yellow, dark);
+  }	
+}
+
+// Activated with jQuery
+.activelink{
+  padding-bottom: 4px;
+  border-bottom: 1px solid palette(yellow, dark);
+}
+
+//Name of Pages
+.title__name{
+  color: palette(yellow, light);
+  padding-left: 23px; 
+}
+
+nav {
+  ul li li a {
+    color: palette(grey);
+  }
+}
+
+
+
+
+
+
+
+
+
+

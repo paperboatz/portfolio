@@ -1,0 +1,46 @@
+
+//Override the vh
+//on front page
+.thumbcont.about {
+  height: initial;
+}
+
+.subtext__about{
+  margin-top: line-height-scale(0);
+}
+
+.aboutme__cont {
+  width: 49%;
+  height: 100%;
+
+  p, ul {
+   @include paraSpacing;
+  }
+}
+
+.aboutme__cont--btmspace{
+  padding-bottom: line-height-scale(5);
+}
+
+.photo {
+  width: 150px;
+  height: 170px;
+  background-image: url('../img/photo.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 2px black solid;
+  float: right;
+}
+
+.photoline {
+	border-bottom: 2px solid palette(yellow, light);
+	height: 20px;
+	width: 100%;
+  clear: both;
+}
+
+.skills {
+  li:last-child{
+    padding-top: line-height-scale(-2);
+  }
+}

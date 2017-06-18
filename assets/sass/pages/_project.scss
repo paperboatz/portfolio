@@ -1,0 +1,102 @@
+
+
+// === TEXT SPACING , IMAGE FLOATS ===== //
+
+
+.solecastcont {
+  width: 100%;
+  clear: both;
+  margin-bottom: (line-height-scale(5) * 2);
+
+  > div {
+    width: 49%;
+  }
+
+  // float the divs
+  @include floats;
+
+  //float interior image
+  div:nth-child(odd) img{
+    float: right;
+    margin-bottom: line-height-scale(0);
+    border: 1px solid palette(grey, dark);
+  }
+
+  // Adds smaller margin to 2nd div only 
+  div:nth-child(2){
+    margin-top: line-height-scale(2);
+  }
+
+  //Adds margin to every Even but first even  child 
+  div:nth-child(1n+3){
+    margin-top: line-height-scale(5);
+  }
+
+//Adds margin to Odd but not the first odd
+  div:nth-child(2n+ 3){
+    margin-top: line-height-scale(2);
+  }
+
+  p {
+    @include paraSpacing;
+  }
+}
+
+
+// === VARIOUS IMAGE SIZES ===== //
+
+.what__img img {
+  width: 80%;
+  // transition: opacity 1s ease-in-out;
+}
+
+.api__img img {
+  width: 60%;
+}
+
+.mvc__img img {
+  width: 100%;
+}
+
+.responsive__img img{
+  width: 60%;
+}
+
+
+// ==== First Thumbnail Hover on projects ====
+// .soleimg{
+
+//   &:hover{
+ 
+//     position: relative;
+    
+//     ::before{
+//       content: 'SEE THE WORK';
+//       display: inline-block;
+//       position: absolute;
+//       top: 40%;
+//       right: 25%;
+//       color: palette(yellow, x-light);
+//       border: 10px solid pallete(grey);
+//       padding-bottom: 2px;
+//       z-index: 6;
+//     } 
+
+//     ::after{
+//       content: '';
+//       z-index: 2;
+//       display: inline-block;
+//       position: absolute;
+//       height: 92%;
+//       background-color: black;
+//       z-index: 2;
+//       width: 70%;
+//       left: 30%;
+//       opacity: 0.5;
+//       transition: opacity 0.55s ease-in-out;
+//     } 
+//   }
+// }
+
+
+

@@ -1,0 +1,91 @@
+
+@keyframes fadein {
+  0% {opacity: 0}
+  100% {opacity: 0.8}
+}
+
+@keyframes revfadein {
+  0% {opacity: 0.8}
+  100% {opacity: 0}
+}
+
+@keyframes imgBkgMove {
+  0% {background-position: center top}
+  100% {background-position: left top}
+}
+
+@keyframes revImgBkgMove {
+  0% { background-position: left top;}
+  100% { background-position: center top;}
+}
+
+@keyframes headerTextMove{
+  0% {   
+      right: 75%;
+      opacity: 0; 
+    }
+  100% { 
+      right: 50%;
+      opacity: 1; 
+    }
+}
+
+@keyframes revHeaderTextMove {
+  0% { 
+      right: 50%;
+      opacity: 1; 
+    }
+  100% { 
+      right: 75%;
+      opacity: 0; 
+    }
+}
+
+@keyframes subTextMove {
+  0% {
+      right: 25%;
+      opacity: 1;
+     }
+  100% {
+      right: 50%;
+      opacity: 1;
+    }
+}
+
+@keyframes revSubTextMove {
+  0% {
+      right: 50%;
+      opacity: 1; 
+    }
+  100% {
+      right: 25%;
+      opacity: 1; 
+    }
+}
+
+@keyframes borderTextMove {
+  0% {
+      right: 10%;
+      opacity: 0;
+    }
+  50% {width: 15%}  
+  100% {
+      right: 50%;
+      opacity: 0.8;
+      width: 25%; 
+    }
+}
+
+@keyframes revBorderTextMove {
+  0% {
+      right: 50%;
+      opacity: 0.8;
+      width: 20%; 
+    }
+  50% {width: 15%}
+  100% {
+      right: 10%;
+      opacity: 0;
+      width: 20%; 
+    }
+}

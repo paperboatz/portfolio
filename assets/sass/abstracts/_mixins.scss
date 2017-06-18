@@ -1,0 +1,72 @@
+
+// ===  TYPE Mixin === //
+
+// https://scotch.io/tutorials/aesthetic-sass-3-typography-and-vertical-rhythm#disqus_thread
+@mixin type-setting($level){
+	font-size: type-scale($level);
+	line-height: line-height-scale($level);
+}
+
+@mixin paraSpacing {
+  margin-top: line-height-scale(-2);
+  margin-left: 40px;
+  width: 80%;
+}
+
+// === TEMPLATE === // 
+// Remember divs selected should be direct children 
+@mixin floats{
+
+  > div:nth-child(odd){
+    float: left;
+    clear: both;
+  }
+  
+  > div:nth-child(even){
+    float: right;
+  }
+}
+
+// ===  FRONT PAGE animation mixin === //
+
+@mixin aniBaseStyles{
+  display: inline-block;
+  color: white;
+  position: absolute;
+  z-index: 3;
+}
+
+@mixin headani {
+  @include aniBaseStyles;
+  font-size: type-scale(3);
+  text-transform: uppercase;
+  font-family: $font-family--display;
+  padding-bottom: 10px;
+  transform: translate(50%, 0);
+  top: 40%;
+}
+
+@mixin borderani {
+  @include aniBaseStyles;
+  border-bottom: 1px palette(grey) solid;
+  height: 5px;
+  width: 25%;
+  transform: translate(50%, 0);
+  top: 47%;
+}
+
+@mixin subani {
+  @include aniBaseStyles;
+ text-transform: uppercase;
+ text-transform: center;
+ transform: translate(50%, 0);
+ top: 50%;
+}
+
+@mixin thumbcover{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  position: absolute;
+}
